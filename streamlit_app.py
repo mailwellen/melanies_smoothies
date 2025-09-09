@@ -3,10 +3,6 @@ import streamlit as st
 from snowflake.snowpark.functions import col
 mport streamlit as st
 
-cnx = st.connection("snowflake", type="snowflake")  # be explicit
-df = cnx.query("SELECT * FROM SMOOTHIES.PUBLIC.FRUIT_OPTIONS")
-st.dataframe(df)
-
 # Write directly to the app
 st.title(f"Customize Your Smoothie!:cup_with_straw:")
 st.write(
